@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 export class Task {
+  id?: number
   check?: boolean
   name!: string
-  id?: number
 }
 
 @Component({
@@ -16,9 +16,9 @@ export class AppComponent {
   title = 'ToDoApp';
 
   tasks: Task[] = [
-    {check: true, name: 'Название 1', id: 1},
-    {check: false, name: 'Название 2', id: 2},
-    {check: true, name: 'Название 3', id: 3}
+    {id: 1, check: true, name: 'Название 1'},
+    {id: 2, check: false, name: 'Название 2'},
+    {id: 3, check: true, name: 'Название 3'}
   ]
 
   updateTasks(task: Task){
@@ -31,6 +31,11 @@ export class AppComponent {
   }
 
   saveTasks(){
-    localStorage.setItem('check', JSON.stringify(this.tasks))
+    let numTask = 0
+    for (let t of this.tasks) {
+      numTask++
+      localStorage.setItem('task '+ numTask.toString(),JSON.stringify(t))
+      console.log(localStorage.getItem('task '+ numTask.toString()))
+    }
   }
 }

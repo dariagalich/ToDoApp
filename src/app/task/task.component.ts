@@ -6,17 +6,22 @@ import {Task} from "../app.component";
   templateUrl: './task.component.html',
   styleUrls: ['./task.component.scss']
 })
-export class TaskComponent implements OnDestroy{
+export class TaskComponent implements OnDestroy {
 
   @Input() task!: Task
   @Output() onRemove = new EventEmitter<number>()
+  isChecked: any;
 
-  removeTask(){
-     this.onRemove.emit(this.task.id)
+  checkValue(event: any) {
+    this.task.checked = event
+    console.log(event);
+  }
+
+  removeTask() {
+    this.onRemove.emit(this.task.id)
   }
 
   ngOnDestroy() {
   }
-
 
 }

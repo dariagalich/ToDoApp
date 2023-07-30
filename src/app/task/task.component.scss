@@ -1,6 +1,26 @@
-input{
-  height: 20px;
-  width: 20px;
-  border-radius: 5px;
-
+.list-group-item {
+  border: none;
+  color: white;
+  text-align: left;
+  background-color: transparent;
 }
+
+.list-group {
+  background-color: green;
+}
+
+label {
+  margin-top: revert;
+  max-width: 100%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+div {
+  display: inline-block;
+}
+
+hr {
+  margin: 10px;
+}
+

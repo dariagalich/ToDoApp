@@ -2,3 +2,13 @@
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+html
+{
+  background: url("assets/background/background.png")no-repeat fixed;
+  background-size: cover;
+}
+body
+{
+  background: none;
+}
+

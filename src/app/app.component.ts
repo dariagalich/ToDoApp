@@ -23,7 +23,7 @@ export class AppComponent {
   title = 'ToDoApp';
 
   tasks: Task[] = [
-    {id: 0, checked: false, name: 'Записывайте сюда ваши задачи)'},
+    {id: 0, name: 'Записывайте сюда ваши задачи)', checked: false},
   ]
 
   updateTasks(task: Task) {
